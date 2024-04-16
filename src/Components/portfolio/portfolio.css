@@ -1,0 +1,77 @@
+#porfolio{
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    background-image: url("../../../public/backs/5132890.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.75;
+}
+
+.contenedor{
+    position: relative;
+    width: 370px;   height: 530px;
+    border-radius: 30px;
+    transition: .5s;
+    margin: 20px;
+}
+
+.contenedor .frente{
+    display: inline-block;
+    width: 370px;   height: 530px;
+    border-radius: 30px;
+    backface-visibility: hidden; 
+    transform: perspective(1000px) rotateY(0deg);
+    transition: .5s; 
+    box-shadow: 0 25px 15px rgb(0 0 0 / 50%);
+    overflow: hidden;
+    
+}
+
+.contenedor .frente img{
+    height: 250px;
+}
+
+.contenedor:hover .frente{
+    transform: perspective(1000px) rotateY(180deg);
+}
+.contenedor .content{
+    position: absolute;
+    top: 0;  left: 0;
+    width: 370px;   height: 530px;
+    border-radius: 30px;
+    backface-visibility: hidden;  
+    transform: perspective(1000px) rotateY(-180deg);
+    background: #fff;
+    transition: .5s;
+    box-shadow: 0 25px 15px rgb(0 0 0 / 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contenedor:hover .content{
+    transform: perspective(1000px) rotateY(0);
+} 
+.contenedor .content h1{
+    color:  #0087ca;
+    text-align: center; 
+}
+
+.restrictor{
+    width: 100%;
+    height: 250px;
+    background-color:  #0087ca;
+    overflow: hidden;
+    margin-bottom: 40px;                
+}
+
+.cardDown{
+    gap: 10px;
+}
+
+.placer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
